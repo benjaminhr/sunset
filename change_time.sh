@@ -21,6 +21,7 @@ case $flag in
       kill -9 $pid 
     fi
     sudo sntp -sS time1.facebook.com >> /dev/null
+    echo "✅ Done ✅"
     ;;
 
   "--set")
