@@ -8,7 +8,7 @@ set_time_to_target_time() {
   year=23
   current_hour_min=$(date +%H:%m | tr -d :)
   target_date="${month_day}${current_hour_min}${year}"
-  sudo date $target_date >> /dev/null
+  date $target_date >> /dev/null
 }
 
 case $flag in
@@ -20,7 +20,7 @@ case $flag in
       echo "💀 killing background job ${pid} 💀"
       kill -9 $pid 
     fi
-    sudo sntp -sS time1.facebook.com >> /dev/null
+    sntp -sS time1.facebook.com >> /dev/null
     echo "✅ Done ✅"
     ;;
 
