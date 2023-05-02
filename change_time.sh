@@ -20,7 +20,7 @@ case $flag in
       echo "💀 killing background job ${pid} 💀"
       kill -9 $pid 
     fi
-    sntp -sS time1.facebook.com >> /dev/null
+    sntp -sS time.apple.com >> /dev/null
     echo "✅ Done ✅"
     ;;
 
@@ -41,7 +41,7 @@ case $flag in
 
   *)
     echo "__________________________________________________"
-    echo "   --reset     | set systime to time1.facebook.com"
+    echo "   --reset     | set systime to time.apple.com"
     echo "   --set       | set time February 6th"
     echo "   --*         | print help menu"
     ;;
